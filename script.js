@@ -1,3 +1,5 @@
+import products from "./products.js";
+
 const cartContainer = document.getElementById("cart-container");
 const productsContainer = document.getElementById("products-container");
 const productsCards = document.getElementById("products-card-container");
