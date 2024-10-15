@@ -5,29 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shopping Cart</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=shopping_cart"
+    />
     <link rel="stylesheet" href="./styles.css" />
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
     </style>
   </head>
   <body>
-    <header>
-      <h1 class="logo">Amazonk</h1>
+    <header class="header">
+      <h1 class="logo">amazonk</h1>
       <button id="cart-btn" type="button" class="btn">
-        <span id="show-hide-cart">Show</span> Cart
+        <span class="material-symbols-outlined"> shopping_cart </span>
       </button>
       <div id="cart-container">
-        <button class="btn" id="clear-cart-btn">Clear Cart</button>
         <div id="products-container"></div>
-        <p>Total number of items: <span id="total-items">0</span></p>
-        <p>Subtotal: <span id="subtotal">$0</span></p>
-        <p>Taxes: <span id="taxes">$0</span></p>
-        <p>Total: <span id="total">$0</span></p>
+        <div class="cart-summary">
+          <p>Total number of items: <span id="total-items">0</span></p>
+          <p>Subtotal: <span id="subtotal">$0</span></p>
+          <p>Taxes: <span id="taxes">$0</span></p>
+          <p>Total: <span id="total">$0</span></p>
+        </div>
+        <div class="action-btn-container">
+          <button class="btn" id="clear-cart-btn">Clear Cart</button>
+          <button class="btn" id="checkout-btn">Checkout</button>
+        </div>
       </div>
     </header>
     <main>
       <div id="products-card-container"></div>
     </main>
-    <script src="./script.js"></script>
+    <script type="module" src="./script.js"></script>
   </body>
 </html>
