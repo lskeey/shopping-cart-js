@@ -70,8 +70,8 @@ body {
   width: 100%;
   height: 240px;
   overflow: hidden;
-  border: 1px solid var(--black);
   margin-bottom: 10px;
+  padding: 16px;
 }
 
 .product-image {
@@ -89,6 +89,7 @@ body {
   font-weight: 600;
   overflow: hidden;
   text-overflow: ellipsis;
+  line-clamp: 2;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
@@ -115,7 +116,20 @@ body {
 
 #cart-btn {
   display: relative;
-  padding: 2px 3px;
+  color: var(--white);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+#cart-count {
+  position: absolute;
+  font-weight: 700;
+  top: 6px;
+  right: 6px;
+  color: var(--white);
+  background-color: var(--red);
+  padding: 1px 4px;
 }
 
 .add-to-cart-btn {

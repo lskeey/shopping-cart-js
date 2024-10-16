@@ -7,6 +7,7 @@ const cartSummary = document.getElementById("cart-summary");
 const actionBtnContainer = document.getElementById("action-btn-container");
 const productsCards = document.getElementById("products-card-container");
 const cartBtn = document.getElementById("cart-btn");
+const cartCount = document.getElementById("cart-count");
 const clearCartBtn = document.getElementById("clear-cart-btn");
 const totalNumberOfItems = document.getElementById("total-items");
 const cartSubTotal = document.getElementById("subtotal");
@@ -58,6 +59,8 @@ class ShoppingCart {
     const currentProductCountSpan = document.getElementById(
       `product-count-for-id${id}`
     );
+
+    cartCount.innerText = currentProductCount;
 
     currentProductCount > 1
       ? (currentProductCountSpan.textContent = `${currentProductCount}x`)
