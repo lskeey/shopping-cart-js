@@ -1,7 +1,10 @@
 import products from "./products.js";
 
 const cartContainer = document.getElementById("cart-container");
+const cartIsEmpty = document.getElementById("empty-cart");
 const productsContainer = document.getElementById("products-container");
+const cartSummary = document.getElementById("cart-summary");
+const actionBtnContainer = document.getElementById("action-btn-container");
 const productsCards = document.getElementById("products-card-container");
 const cartBtn = document.getElementById("cart-btn");
 const clearCartBtn = document.getElementById("clear-cart-btn");
@@ -66,6 +69,10 @@ class ShoppingCart {
         <p>$${priceDollars}</p>
       </div>
       `);
+
+    cartIsEmpty.style.display = "none";
+    cartSummary.style.display = "flex";
+    actionBtnContainer.style.display = "flex";
   }
 
   getCounts() {
@@ -83,6 +90,10 @@ class ShoppingCart {
     );
 
     if (isCartCleared) {
+      cartIsEmpty.style.display = "flex";
+      cartSummary.style.display = "none";
+      actionBtnContainer.style.display = "none";
+
       this.items = [];
       this.total = 0;
       productsContainer.innerHTML = "";

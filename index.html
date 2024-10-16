@@ -21,14 +21,20 @@
         <span class="material-symbols-outlined"> shopping_cart </span>
       </button>
       <div id="cart-container">
+        <div id="empty-cart">
+          <span class="material-symbols-outlined empty-cart-icon">
+            shopping_cart
+          </span>
+          <p class="empty-cart-text">You cart is empty</p>
+        </div>
         <div id="products-container"></div>
-        <div class="cart-summary">
+        <div id="cart-summary">
           <p>Total number of items: <span id="total-items">0</span></p>
           <p>Subtotal: <span id="subtotal">$0</span></p>
           <p>Taxes: <span id="taxes">$0</span></p>
           <p>Total: <span id="total">$0</span></p>
         </div>
-        <div class="action-btn-container">
+        <div id="action-btn-container">
           <button class="btn" id="clear-cart-btn">Clear Cart</button>
           <button class="btn" id="checkout-btn">Checkout</button>
         </div>
