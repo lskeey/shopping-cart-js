@@ -93,6 +93,7 @@ class ShoppingCart {
     );
 
     if (isCartCleared) {
+      cartCount.innerText = 0;
       cartIsEmpty.style.display = "flex";
       cartSummary.style.display = "none";
       actionBtnContainer.style.display = "none";
